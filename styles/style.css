@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-body: #000;
+  --bg-color-input: #06181c;
+  --bg-button: #065e7c;
+  --bg-table-header: #092d38;
+  --bg-table-row01: #06161b;
+  --bg-table-row02: #06161b80;
+
+  --ff-roboto: 'Roboto', sans-serif;
+  --fc-table-title: #e1e1e6;
+  --fc-input: #7c7c8a;
+  --fc-button: white;
+  --fc-btn-remove: #f75a68;
+  --fc-table-msg: #4e5455;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+body {
+  color: white;
+  font-size: 1.6rem;
+  background-color: var(--bg-body);
+}
+
+body * {
+  font-family: var(--ff-roboto);
+}
+
+#app {
+  max-width: 1120px;
+  min-width: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#app > header {
+  margin-top: 11.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--ff-roboto);
+  font-weight: 700;
+  font-size: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo span {
+  margin-inline: 0.8rem;
+}
+
+.search {
+  width: 57%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search input {
+  background-color: var(--bg-color-input);
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--fc-input);
+  flex: 1 1 72%;
+  height: 4.8rem;
+  padding: 1.6rem;
+}
+
+.search button {
+  background-color: var(--bg-button);
+  border-radius: 0.5rem;
+  padding-inline: 3.2rem;
+
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--fc-button);
+  font-weight: 700;
+}
+
+.search button:hover {
+  background-color: white;
+  color: var(--bg-button);
+}
+
+.search button:hover svg path {
+  fill: var(--bg-button);
+}
+
+.table-wrapper {
+  margin-top: 9rem;
+  border: 1px solid #4a808c;
+  border-radius: 12px;
+}
+
+table {
+  border-radius: 12px;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+table * {
+  color: rgba(225, 225, 230, 1);
+}
+
+thead th {
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  background-color: var(--bg-table-header);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-table-row02);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--bg-table-row01);
+}
+
+tbody td {
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+tbody td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+tbody td.user img {
+  border-radius: 50%;
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover;
+}
+
+tbody td.user a {
+  text-decoration: none;
+}
+
+tbody td.user a p {
+  font-weight: 700;
+}
+
+tbody .remove {
+  color: var(--fc-btn-remove);
+  font-weight: 700;
+  font-size: 2rem;
+}
